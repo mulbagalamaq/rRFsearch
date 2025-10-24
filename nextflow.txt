@@ -1,0 +1,101 @@
+// Default parameters
+params {
+    metadata = 'Inputs/metadata.csv'
+    outdir = 'results'
+}
+
+// Enable Docker/Podman
+docker {
+    enabled = true
+    runOptions = '-u $(id -u):$(id -g)'
+}
+
+// Process configuration
+process {
+    // Default resources
+    cpus = 4
+    memory = '8.GB'
+    time = '2.h'
+    
+    // Per-process configuration
+    withName: 'FETCH_DATA' {
+        cpus = 4
+        memory = '2.GB'
+        time = '2.h'
+        maxForks = 3  // Limit concurrent downloads
+        errorStrategy = 'retry'
+        maxRetries = 3
+    }
+    
+    withName: 'FASTQC' {
+        cpus = 4
+        memory = '2.GB'
+        time = '30.min'
+    }
+    
+    withName: 'TRIM_READS' {
+        cpus = 8
+        memory = '2.GB'
+        time = '1.h'
+        errorStrategy = 'retry'
+        maxRetries = 2
+    }
+    
+    withName: 'MULTIQC' {
+        cpus = 2
+        memory = '2.GB'
+        time = '30.min'
+    }
+}
+
+// Execution report
+timeline {
+    enabled = true
+    file = "${params.outdir}/timeline.html"
+    timeline.overwrite = true
+}
+
+report {
+    enabled = true
+    file = "${params.outdir}/report.html"
+    report.overwrite = true
+}
+
+trace {
+    enabled = true
+    file = "${params.outdir}/trace.txt"
+    trace.overwrite = true
+}
+
+dag {
+    enabled = true
+    file = "${params.outdir}/dag.svg"
+    dag.overwrite = true
+}
+
+// Profiles
+profiles {
+    standard {
+        docker.enabled = true
+    }
+    
+    test {
+        params {
+            metadata = 'test_data/test_metadata.csv'
+            outdir = 'test_results'
+        }
+        process {
+            withName: 'FETCH_DATA' {
+                maxForks = 2
+            }
+        }
+    }
+    
+    podman {
+        podman.enabled = true
+        docker.enabled = false
+    }
+}
+
+// Clean up work directory for successful tasks
+cleanup = false  // Set to true in production

@@ -1,0 +1,136 @@
+Oct-24 17:42:04.578 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --metadata Inputs/metadata.csv --outdir results
+Oct-24 17:42:04.785 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.0
+Oct-24 17:42:05.026 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/anirudh/.nextflow/plugins; core-plugins: nf-amazon@3.4.1,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.3,nf-k8s@1.2.2,nf-tower@1.17.1,nf-wave@1.16.1
+Oct-24 17:42:05.075 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-24 17:42:05.080 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-24 17:42:05.087 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Oct-24 17:42:05.113 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Oct-24 17:42:05.379 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-24 17:42:05.383 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-24 17:42:05.385 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-24 17:42:05.415 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/anirudh/.nextflow/secrets/store.json
+Oct-24 17:42:05.434 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4e61e4c2] - activable => nextflow.secret.LocalSecretsProvider@4e61e4c2
+Oct-24 17:42:05.443 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Oct-24 17:42:05.464 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [awesome_engelbart] DSL2 - revision: a6aa5c4b6c
+Oct-24 17:42:05.584 [main] DEBUG nextflow.Session - Session UUID: 6f9ef8bd-e495-454a-8a0b-a98ea00723fc
+Oct-24 17:42:05.586 [main] DEBUG nextflow.Session - Run name: awesome_engelbart
+Oct-24 17:42:05.587 [main] DEBUG nextflow.Session - Executor pool size: 16
+Oct-24 17:42:05.605 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Oct-24 17:42:05.620 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Oct-24 17:42:05.660 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.0 build 10289
+  Created: 22-10-2025 16:26 UTC 
+  System: Linux 6.6.87.2-microsoft-standard-WSL2
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 22.0.1-internal-adhoc.conda.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 22267@AniB [127.0.1.1]
+  CPUs: 16 - Mem: 3.5 GB (221.4 MB) - Swap: 1 GB (1023 MB)
+Oct-24 17:42:05.746 [main] DEBUG nextflow.Session - Work-dir: /mnt/e/rRNA_frags/rRFsearch/work [v9fs]
+Oct-24 17:42:05.818 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-24 17:42:05.842 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Oct-24 17:42:05.848 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Oct-24 17:42:05.923 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-24 17:42:05.939 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 17; maxThreads: 1000
+Oct-24 17:42:06.081 [main] DEBUG nextflow.Session - Session start
+Oct-24 17:42:06.852 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-24 17:42:07.880 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-24 17:42:07.881 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-24 17:42:07.899 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Oct-24 17:42:07.913 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=16; memory=3.5 GB; capacity=16; pollInterval=100ms; dumpInterval=5m
+Oct-24 17:42:07.918 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Oct-24 17:42:07.971 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FETCH_DATA': maxForks=0; fair=false; array=0
+Oct-24 17:42:08.040 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-24 17:42:08.040 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-24 17:42:08.042 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTQC_RAW': maxForks=0; fair=false; array=0
+Oct-24 17:42:08.053 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-24 17:42:08.053 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-24 17:42:08.057 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'TRIM_READS': maxForks=0; fair=false; array=0
+Oct-24 17:42:08.073 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-24 17:42:08.074 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-24 17:42:08.077 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTQC_TRIMMED': maxForks=0; fair=false; array=0
+Oct-24 17:42:08.122 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-24 17:42:08.123 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-24 17:42:08.126 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MULTIQC': maxForks=0; fair=false; array=0
+Oct-24 17:42:08.139 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, FASTQC_RAW, MULTIQC, TRIM_READS, FETCH_DATA, FASTQC_TRIMMED
+Oct-24 17:42:08.144 [main] DEBUG nextflow.Session - Igniting dataflow network (6)
+Oct-24 17:42:08.156 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCH_DATA
+Oct-24 17:42:08.158 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC_RAW
+Oct-24 17:42:08.159 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > TRIM_READS
+Oct-24 17:42:08.162 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC_TRIMMED
+Oct-24 17:42:08.164 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MULTIQC
+Oct-24 17:42:08.169 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_0bf35e24ba5609d0: /mnt/e/rRNA_frags/rRFsearch/main.nf
+  Script_d3c8f1b90bcb5d46: /mnt/e/rRNA_frags/rRFsearch/modules.nf
+Oct-24 17:42:08.170 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Oct-24 17:42:08.172 [main] DEBUG nextflow.Session - Session await
+Oct-24 17:42:08.531 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-24 17:42:08.536 [Task submitter] INFO  nextflow.Session - [a1/2bab90] Submitted process > FETCH_DATA (1)
+Oct-24 17:42:08.563 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-24 17:42:08.565 [Task submitter] INFO  nextflow.Session - [f1/a7ec5d] Submitted process > FETCH_DATA (2)
+Oct-24 17:47:08.073 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: FETCH_DATA (1); status: RUNNING; exit: -; error: -; workDir: /mnt/e/rRNA_frags/rRFsearch/work/a1/2bab901b8c6c6809b89a1b6c2d8e48]
+~> TaskHandler[id: 2; name: FETCH_DATA (2); status: RUNNING; exit: -; error: -; workDir: /mnt/e/rRNA_frags/rRFsearch/work/f1/a7ec5da1aedd39976769cb68ce8f5b]
+Oct-24 17:48:14.966 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: FETCH_DATA (2); status: COMPLETED; exit: 0; error: -; workDir: /mnt/e/rRNA_frags/rRFsearch/work/f1/a7ec5da1aedd39976769cb68ce8f5b]
+Oct-24 17:48:14.969 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Oct-24 17:48:15.071 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Oct-24 17:48:15.110 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-24 17:48:15.112 [Task submitter] INFO  nextflow.Session - [45/ed01b6] Submitted process > TRIM_READS (2)
+Oct-24 17:48:15.139 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-24 17:48:15.142 [Task submitter] INFO  nextflow.Session - [96/a9b3c0] Submitted process > FASTQC_RAW (2)
+Oct-24 17:48:15.502 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: TRIM_READS (2); status: COMPLETED; exit: 127; error: -; workDir: /mnt/e/rRNA_frags/rRFsearch/work/45/ed01b639029458058c470355490536]
+Oct-24 17:48:15.522 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=TRIM_READS (2); work-dir=/mnt/e/rRNA_frags/rRFsearch/work/45/ed01b639029458058c470355490536
+  error [nextflow.exception.ProcessFailedException]: Process `TRIM_READS (2)` terminated with an error exit status (127)
+Oct-24 17:48:15.577 [TaskFinalizer-2] ERROR nextflow.processor.TaskProcessor - Error executing process > 'TRIM_READS (2)'
+
+Caused by:
+  Process `TRIM_READS (2)` terminated with an error exit status (127)
+
+
+Command executed:
+
+  atria             -r SRR000013_2.fastq.gz             -R SRR000013_4.fastq.gz             -o .             --length-range 20:500             --polyG             --check-identifier             -t 1
+
+Command exit status:
+  127
+
+Command output:
+  (empty)
+
+Command error:
+  .command.sh: line 2: atria: command not found
+
+Work dir:
+  /mnt/e/rRNA_frags/rRFsearch/work/45/ed01b639029458058c470355490536
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Oct-24 17:48:15.594 [TaskFinalizer-2] DEBUG nextflow.Session - Session aborted -- Cause: Process `TRIM_READS (2)` terminated with an error exit status (127)
+Oct-24 17:48:15.645 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Oct-24 17:48:15.704 [TaskFinalizer-2] DEBUG nextflow.Session - The following nodes are still active:
+[process] FASTQC_RAW
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] TRIM_READS
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] FASTQC_TRIMMED
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] MULTIQC
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: input_files
+  port 1: (cntrl) -     ; channel: $
+
+Oct-24 17:48:15.720 [TaskFinalizer-2] WARN  n.processor.TaskPollingMonitor - Killing running tasks (2)
+Oct-24 17:48:15.846 [TaskFinalizer-2] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=2; succeedDuration=6m 6s; failedDuration=337ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=3; peakMemory=0; ]
+Oct-24 17:48:16.008 [main] DEBUG nextflow.Session - Session await > all processes finished
+Oct-24 17:48:16.009 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Oct-24 17:48:16.016 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=2; succeedDuration=6m 6s; failedDuration=337ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=3; peakMemory=0; ]
+Oct-24 17:48:16.059 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Oct-24 17:48:16.135 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
