@@ -1,0 +1,46 @@
+# ===============================
+# Ultra-slim SRA Downloader Image
+# Base: debian:bookworm-slim (~30 MB)
+# Includes:
+#   - bash
+#   - aria2
+#   - NCBI SRA-Toolkit (binary)
+# ===============================
+
+FROM debian:bookworm-slim
+
+LABEL maintainer="Anirudh <anirudhbantwalbaliga@gmail.com>"
+LABEL description="Lightweight Docker image for SRA/ENA data retrieval using aria2 and SRA-Tools"
+LABEL version="1.0"
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PATH="/opt/sratoolkit/bin:$PATH"
+
+# ---- Install only minimal dependencies ----
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        bash \
+        ca-certificates \
+        curl \
+        aria2 \
+        pigz \
+        gzip \
+        bzip2 \
+        && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# ---- Install latest SRA-Toolkit binary ----
+RUN mkdir -p /opt/sratoolkit && \
+    cd /opt/sratoolkit && \
+    curl -fsSL --retry 3 https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz -o sratoolkit.tar.gz && \
+    tar -xzf sratoolkit.tar.gz --strip-components=1 && \
+    rm sratoolkit.tar.gz
+
+# ---- Basic health check ----
+RUN bash -c "prefetch --version && aria2c --version && fasterq-dump --version"
+
+WORKDIR /data
+
+# Default entrypoint
+ENTRYPOINT ["/bin/bash"]
