@@ -1,1 +1,4 @@
 . filter=lfs diff=lfs merge=lfs -text
+atria.sif filter=lfs diff=lfs merge=lfs -text
+sra_toolkit.sif filter=lfs diff=lfs merge=lfs -text
+staphb_fastqc.sif filter=lfs diff=lfs merge=lfs -text
