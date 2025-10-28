@@ -1,0 +1,13 @@
+2025-10-25 11:34:07	-	astonishing_engelbart	-	a6aa5c4b6cffbe97bc8bb579c0f95f7a	c1aea5b8-dd8a-43d0-98a3-9f5e1b4fc1db	nextflow run main1.nf -c nextflow.config
+2025-10-25 11:46:56	5.6s	spontaneous_franklin	ERR	a6aa5c4b6cffbe97bc8bb579c0f95f7a	a4f7fecc-abd4-4272-a1c7-fbeb2fcd3127	nextflow run main1.nf -c nextflow.config
+2025-10-25 12:08:48	5s	admiring_sammet	ERR	a6aa5c4b6cffbe97bc8bb579c0f95f7a	b0a7c475-33b8-4abc-8252-80987e6b0284	nextflow run main1.nf -c nextflow.config
+2025-10-25 13:58:15	3.9s	jolly_ochoa	ERR	a6aa5c4b6cffbe97bc8bb579c0f95f7a	87cf6919-886a-4a69-ae12-f74c65261531	nextflow run main1.nf --metadata metadata.csv --outdir results
+2025-10-25 13:58:32	3.5s	high_lalande	ERR	a6aa5c4b6cffbe97bc8bb579c0f95f7a	bfa5df7f-aa6b-477c-9a4b-b7b422f1a698	nextflow run main1.nf --metadata bin/metadata.csv --outdir results
+2025-10-25 13:58:48	22.5s	amazing_yalow	ERR	a6aa5c4b6cffbe97bc8bb579c0f95f7a	fba0e59b-dd11-45da-a0b8-a40b2751441a	nextflow run main1.nf --metadata Inputs/metadata.csv --outdir results
+2025-10-25 14:00:24	10.5s	fervent_lalande	ERR	a6aa5c4b6cffbe97bc8bb579c0f95f7a	a08f57fa-d9d2-46e4-bc0d-0053e9716fd2	nextflow run main1.nf --metadata Inputs/metadata.csv --outdir results
+2025-10-28 12:52:50	9.7s	intergalactic_hamilton	ERR	a6aa5c4b6cffbe97bc8bb579c0f95f7a	3d051576-d5b8-4776-b016-33433cd44955	nextflow run main1.nf -c nextflow.config
+2025-10-28 12:53:44	4.7s	golden_planck	ERR	a6aa5c4b6cffbe97bc8bb579c0f95f7a	d69e344b-0a87-46a1-a0be-3136a123a8f8	nextflow run main1.nf
+2025-10-28 12:54:06	22m 42s	curious_boyd	ERR	c169116d6e9973448360acc721cb9dd5	d535ebd0-3734-4666-ad42-69ea3d511974	nextflow run main1.nf
+2025-10-28 13:22:15	6m 31s	nauseous_rosalind	ERR	c169116d6e9973448360acc721cb9dd5	f6f3bb5f-043e-40de-a75b-1c956792bf2c	nextflow run main1.nf
+2025-10-28 13:34:44	5.7s	high_cori	ERR	c169116d6e9973448360acc721cb9dd5	f6f3bb5f-043e-40de-a75b-1c956792bf2c	nextflow run main1.nf -resume
+2025-10-28 13:36:32	5.3s	mad_meninsky	ERR	c169116d6e9973448360acc721cb9dd5	f6f3bb5f-043e-40de-a75b-1c956792bf2c	nextflow run main1.nf -resume

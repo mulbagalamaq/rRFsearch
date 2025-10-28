@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 set -euo pipefail
 
 acc=$1
@@ -8,7 +8,7 @@ mkdir -p "$cache_dir"
 
 echo "[INFO] Fetching $acc ..."
 
-# Determine accession type
+# Type of source file
 if [[ "$acc" =~ ^SRR|^DRR|^ERR ]]; then
     source="SRA"
 else
@@ -28,14 +28,14 @@ download_with_aria() {
     fi
 }
 
-# Decision tree
+# SRA or ENA
 if command -v aria2c &>/dev/null && [[ "$acc" =~ ^ERR|^DRR ]]; then
     download_with_aria
 else
     echo "[INFO] Using prefetch (HTTP)"
     prefetch "$acc" --output-directory "$cache_dir"
     
-    # Find the downloaded .sra file (prefetch creates nested directories)
+    # Find the downloaded .sra file
     sra_file=$(find "$cache_dir" -name "*.sra" -type f | head -n1)
     
     if [[ -n "$sra_file" && -f "$sra_file" ]]; then

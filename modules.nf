@@ -1,6 +1,7 @@
 
 process FETCH_DATA {
-    container 'ncbi/sra-tools:latest'
+    containerOptions '--entrypoint /bin/bash'
+    container 'docker.io/anirudhbaliga/sra_toolkit:latest'
     tag "$sample_id"
     publishDir "${params.outdir}/${sample_id}/raw", mode: 'copy'
 
@@ -36,7 +37,7 @@ process FASTQC {
 }
 
 process TRIM_READS {
-    container 'anirudhbaliga/atria:4.1.3'
+    container 'anirudhbaliga/atria:latest'
     tag "$sample_id"
     publishDir "${params.outdir}/${sample_id}/trimmed", mode: 'copy'
 
@@ -74,7 +75,7 @@ process TRIM_READS {
 }
 
 process MULTIQC {
-    container 'staphb/multiqc:latest'
+    container 'staphb/fastqc:0.12.1'
     publishDir "${params.outdir}/multiqc", mode: 'copy'
 
     input:
