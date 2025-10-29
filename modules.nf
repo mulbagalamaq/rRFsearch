@@ -1,6 +1,6 @@
 
 process FETCH_DATA {
-    containerOptions '--entrypoint /bin/bash'
+    containerOptions '--entrypoint /bin/bash'  // stackoverflow recommended -s in addition but didnt work 
     container 'docker.io/anirudhbaliga/sra_toolkit:latest'
     tag "$sample_id"
     publishDir "${params.outdir}/${sample_id}/raw", mode: 'copy'
