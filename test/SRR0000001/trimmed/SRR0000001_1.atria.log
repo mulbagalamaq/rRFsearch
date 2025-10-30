@@ -1,0 +1,33 @@
+┌ Info: ATRIA VERSIONS
+│   atria = v4.1.3
+│   julia = v1.8.5
+└ @ Atria.Trimmer /home/jc/projects/Atria/src/Trimmer/wrapper_pe.jl:519
+┌ Info: ATRIA ARGUMENTS
+│   command = `-r SRR0000001_1.fastq.gz -R SRR0000001_2.fastq.gz -o . --polyG -t 4`
+└ @ Atria.Trimmer /home/jc/projects/Atria/src/Trimmer/wrapper_pe.jl:520
+┌ Info: ATRIA OUTPUT FILES
+│   read1 = ./SRR0000001_1.atria.fastq.gz
+│   read2 = ./SRR0000001_2.atria.fastq.gz
+└ @ Atria.Trimmer /home/jc/projects/Atria/src/Trimmer/wrapper_pe.jl:521
+┌ Info: ATRIA PROCESSING ORDER
+│   order = Any["DefaultOrder"]
+└ @ Atria.Trimmer /home/jc/projects/Atria/src/Trimmer/wrapper_pe.jl:522
+┌ Info: ATRIA TRIMMERS AND FILTERS
+│   adapter_trimming = true
+│   consensus_calling = true
+│   hard_clip_end_r1 = false
+│   hard_clip_end_r2 = false
+│   hard_clip_after_r1 = false
+│   hard_clip_after_r2 = false
+│   hard_clip_front_r1 = false
+│   hard_clip_front_r2 = false
+│   quality_trimming = true
+│   tail_N_trimming = true
+│   max_N_filtering = true
+│   length_filtering = true
+│   pcr_dedup = false
+└ @ Atria.Trimmer /home/jc/projects/Atria/src/Trimmer/wrapper_pe.jl:523
+┌ Info: ATRIA COMPLETE
+│   read1 = ./SRR0000001_1.atria.fastq.gz
+│   read2 = ./SRR0000001_2.atria.fastq.gz
+└ @ Atria.Trimmer /home/jc/projects/Atria/src/Trimmer/wrapper_pe.jl:669

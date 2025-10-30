@@ -11,3 +11,11 @@
 2025-10-28 13:22:15	6m 31s	nauseous_rosalind	ERR	c169116d6e9973448360acc721cb9dd5	f6f3bb5f-043e-40de-a75b-1c956792bf2c	nextflow run main1.nf
 2025-10-28 13:34:44	5.7s	high_cori	ERR	c169116d6e9973448360acc721cb9dd5	f6f3bb5f-043e-40de-a75b-1c956792bf2c	nextflow run main1.nf -resume
 2025-10-28 13:36:32	5.3s	mad_meninsky	ERR	c169116d6e9973448360acc721cb9dd5	f6f3bb5f-043e-40de-a75b-1c956792bf2c	nextflow run main1.nf -resume
+2025-10-29 15:29:42	16.3s	wise_goldstine	ERR	44c90c511ae7474ff3e402f337d7f325	239b603a-b291-4300-95bb-8fc040c3c9ea	nextflow run TestAtria.nf --outdir test
+2025-10-29 15:35:57	1m 15s	hungry_swartz	ERR	63de966f5ff565730ba0131092532082	bbaae471-d9af-4d4c-a6f5-fc4997196b54	nextflow run TestAtria.nf --outdir test
+2025-10-29 15:38:41	4.1s	nostalgic_ride	ERR	e36605139fc86ff3bce8ad5e31c6ee1a	d5749298-bdf3-4b04-8a44-d7d1fcf89363	nextflow run TestAtria.nf --outdir test
+2025-10-29 15:38:52	1m 53s	boring_poisson	ERR	3017b241b1948855dc8b677231d837e6	bf3adff9-23fa-48fa-9e75-d28b83c9e7a6	nextflow run TestAtria.nf --outdir test
+2025-10-29 15:42:59	44.2s	fervent_crick	ERR	e1e1b058d8580867dcf192b421fb665a	885cfc1c-6112-43c7-bf4a-32b423858e6d	nextflow run TestAtria.nf --outdir test
+2025-10-30 10:23:37	7.9s	focused_plateau	ERR	e1e1b058d8580867dcf192b421fb665a	d6b7209d-0122-4563-b56d-44bcb8a6107b	nextflow run TestAtria.nf
+2025-10-30 10:24:28	38.9s	nostalgic_majorana	OK	e1e1b058d8580867dcf192b421fb665a	89b1a33f-72ec-41fe-a35c-7f3e29c78319	nextflow run TestAtria.nf
+2025-10-30 10:28:59	19.3s	deadly_boyd	OK	e1e1b058d8580867dcf192b421fb665a	2e2155e3-7c1b-46c3-ab6c-388b155899e6	nextflow run TestAtria.nf -c nextflow.config

@@ -1,0 +1,160 @@
+Oct-29 15:35:54.555 [main] DEBUG nextflow.cli.Launcher - $> nextflow run TestAtria.nf --outdir test
+Oct-29 15:35:54.841 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.0
+Oct-29 15:35:54.951 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/anirudh/rRFsearch/nextflow.config
+Oct-29 15:35:54.959 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/anirudh/rRFsearch/nextflow.config
+Oct-29 15:35:55.038 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-29 15:35:56.071 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/anirudh/.nextflow/plugins; core-plugins: nf-amazon@3.4.1,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.3,nf-k8s@1.2.2,nf-tower@1.17.1,nf-wave@1.16.1
+Oct-29 15:35:56.110 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-29 15:35:56.112 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-29 15:35:56.125 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Oct-29 15:35:56.176 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Oct-29 15:35:56.673 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-29 15:35:56.677 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-29 15:35:56.678 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-29 15:35:56.725 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/anirudh/.nextflow/secrets/store.json
+Oct-29 15:35:56.734 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@49d831c2] - activable => nextflow.secret.LocalSecretsProvider@49d831c2
+Oct-29 15:35:56.739 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Oct-29 15:35:56.785 [main] DEBUG nextflow.cli.CmdRun - Launching `TestAtria.nf` [hungry_swartz] DSL2 - revision: 63de966f5f
+Oct-29 15:35:56.921 [main] DEBUG nextflow.Session - Session UUID: bbaae471-d9af-4d4c-a6f5-fc4997196b54
+Oct-29 15:35:56.922 [main] DEBUG nextflow.Session - Run name: hungry_swartz
+Oct-29 15:35:56.923 [main] DEBUG nextflow.Session - Executor pool size: 16
+Oct-29 15:35:56.942 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Oct-29 15:35:56.956 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Oct-29 15:35:57.019 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.0 build 10289
+  Created: 22-10-2025 16:26 UTC 
+  System: Linux 6.6.87.2-microsoft-standard-WSL2
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 22.0.1-internal-adhoc.conda.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 8882@AniB [127.0.1.1]
+  CPUs: 16 - Mem: 3.5 GB (866 MB) - Swap: 1 GB (1023 MB)
+Oct-29 15:35:57.092 [main] DEBUG nextflow.Session - Work-dir: /home/anirudh/rRFsearch/work [ext2/ext3]
+Oct-29 15:35:57.161 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-29 15:35:57.182 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Oct-29 15:35:57.190 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Oct-29 15:35:57.275 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-29 15:35:57.299 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 17; maxThreads: 1000
+Oct-29 15:35:57.529 [main] DEBUG nextflow.Session - Session start
+Oct-29 15:35:58.283 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-29 15:35:58.665 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-29 15:35:58.666 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-29 15:35:58.686 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Oct-29 15:35:58.700 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=16; memory=3.5 GB; capacity=16; pollInterval=100ms; dumpInterval=5m
+Oct-29 15:35:58.706 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Oct-29 15:35:58.766 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ATRIA_TRIM': maxForks=0; fair=false; array=0
+Oct-29 15:35:58.837 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: ATRIA_TRIM
+Oct-29 15:35:58.842 [main] DEBUG nextflow.Session - Igniting dataflow network (2)
+Oct-29 15:35:58.858 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: test/; pattern: *_{1,2}.fastq.gz; options: [:]
+Oct-29 15:35:58.862 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ATRIA_TRIM
+Oct-29 15:35:58.866 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_1f016178d05e0df9: /home/anirudh/rRFsearch/TestAtria.nf
+Oct-29 15:35:58.867 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Oct-29 15:35:58.867 [main] DEBUG nextflow.Session - Session await
+Oct-29 15:35:59.496 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-29 15:35:59.502 [Task submitter] INFO  nextflow.Session - [eb/3b948e] Submitted process > ATRIA_TRIM (ERR000001)
+Oct-29 15:37:11.024 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: ATRIA_TRIM (ERR000001); status: COMPLETED; exit: 1; error: -; workDir: /home/anirudh/rRFsearch/work/eb/3b948e7315b8eca83758ff8d313b2b]
+Oct-29 15:37:11.064 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Oct-29 15:37:11.203 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ATRIA_TRIM (ERR000001); work-dir=/home/anirudh/rRFsearch/work/eb/3b948e7315b8eca83758ff8d313b2b
+  error [nextflow.exception.ProcessFailedException]: Process `ATRIA_TRIM (ERR000001)` terminated with an error exit status (1)
+Oct-29 15:37:11.407 [TaskFinalizer-1] ERROR nextflow.processor.TaskProcessor - Error executing process > 'ATRIA_TRIM (ERR000001)'
+
+Caused by:
+  Process `ATRIA_TRIM (ERR000001)` terminated with an error exit status (1)
+
+
+Command executed:
+
+  atria         -r ERR000001_1.fastq.gz         -R ERR000001_2.fastq.gz         -o .         --length-range 20:500         --polyG         --check-identifier         -t 1
+
+Command exit status:
+  1
+
+Command output:
+  pigz 2.6
+
+Command error:
+  ┌ Warning: Expected non-existent /home/jc/.julia/juliaup/julia-1.8.5+0.x64.linux.gnu/share/julia to be your Julia directory.
+  │ Certain functionality will be disabled.
+  │ To fix this, try deleting Revise's cache files in ~/.julia/compiled/v1.8/Revise, then restart Julia and load Revise.
+  │ If this doesn't fix the problem, please report an issue at https://github.com/timholy/Revise.jl/issues.
+  └ @ Revise /home/jc/.julia/packages/Revise/bVQJC/src/packagedef.jl:1325
+  pigz 2.6
+  ┌ Info: ATRIA VERSIONS
+  │   atria = "v4.1.3"
+  └   julia = "v1.8.5"
+  ┌ Info: ATRIA ARGUMENTS
+  └   command = `-r ERR000001_1.fastq.gz -R ERR000001_2.fastq.gz -o . --length-range 20:500 --polyG --check-identifier -t 1`
+  ┌ Info: ATRIA OUTPUT FILES
+  │   read1 = "./ERR000001_1.atria.fastq.gz"
+  └   read2 = "./ERR000001_2.atria.fastq.gz"
+  ┌ Info: ATRIA PROCESSING ORDER
+  │   order =
+  │    1-element Vector{Any}:
+  └     "DefaultOrder"
+  ┌ Info: ATRIA TRIMMERS AND FILTERS
+  │   adapter_trimming = true
+  │   consensus_calling = true
+  │   hard_clip_end_r1 = false
+  │   hard_clip_end_r2 = false
+  │   hard_clip_after_r1 = false
+  │   hard_clip_after_r2 = false
+  │   hard_clip_front_r1 = false
+  │   hard_clip_front_r2 = false
+  │   quality_trimming = true
+  │   tail_N_trimming = true
+  │   max_N_filtering = true
+  │   length_filtering = true
+  └   pcr_dedup = false
+  [ Info: Cycle 1: read 580664/580664 pairs; wrote 0/0 pairs; (copied 0/0 reads)
+  [ Info: Cycle 2: read 573102/1153766 pairs; wrote 0/0 pairs; (copied 0/0 reads)
+  [ Info: Cycle 3: read 16923/1170689 pairs; wrote 0/0 pairs; (copied 0/0 reads)
+  [ Info: Cycle 4: read 104/1170793 pairs; wrote 0/0 pairs; (copied 0/0 reads)
+  Numbers of reads in R1 and R2 not the same!
+
+Work dir:
+  /home/anirudh/rRFsearch/work/eb/3b948e7315b8eca83758ff8d313b2b
+
+Container:
+  docker.io/anirudhbaliga/atria:latest
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Oct-29 15:37:11.494 [TaskFinalizer-1] DEBUG nextflow.Session - Session aborted -- Cause: Process `ATRIA_TRIM (ERR000001)` terminated with an error exit status (1)
+Oct-29 15:37:11.518 [main] DEBUG nextflow.Session - Session await > all processes finished
+Oct-29 15:37:11.592 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Oct-29 15:37:11.593 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Oct-29 15:37:11.638 [TaskFinalizer-1] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=1m 11s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Oct-29 15:37:11.640 [TaskFinalizer-1] DEBUG nextflow.Session - null
+java.lang.InterruptedException: null
+	at java.base/java.lang.Object.wait0(Native Method)
+	at java.base/java.lang.Object.wait(Object.java:375)
+	at java.base/java.lang.Thread.join(Thread.java:2045)
+	at java.base/java.lang.Thread.join(Thread.java:2121)
+	at nextflow.trace.AnsiLogObserver.onFlowComplete(AnsiLogObserver.groovy:520)
+	at nextflow.Session$_notifyFlowComplete_lambda39.doCall(Session.groovy:1121)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1121)
+	at nextflow.Session.shutdown0(Session.groovy:779)
+	at nextflow.Session.abort(Session.groovy:834)
+	at nextflow.Session.fault(Session.groovy:796)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:753)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:736)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1339)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1094)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:726)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Oct-29 15:37:11.683 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=1m 11s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Oct-29 15:37:11.985 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Oct-29 15:37:12.047 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
