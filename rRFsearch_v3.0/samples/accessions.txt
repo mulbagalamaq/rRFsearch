@@ -1,0 +1,3 @@
+SRR000013
+# Add one accession per line (SRR/ERR/DRR/GEO IDs). Lines starting with # are ignored by fetchngs.
+
